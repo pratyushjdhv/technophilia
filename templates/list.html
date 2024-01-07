@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+</head>
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+
+<body>
+    <h1>enlistment</h1>
+    {%if message %}
+    <p>{{message}}</p>
+    {%else %}
+    <table id="enlistment" style="width: 50%; align-self:center;">
+        <tr>
+            <th>Name</th>
+            <th>email</th>
+            <th>password</th>
+            <th>scores</th>
+            <th>update scores</th>
+        </tr>
+        {% for l in lis %}
+        <tr>
+            <td>{{l.name}}</td>
+            <td>{{l.email}}</td>
+            <td>{{l.password}}</td>
+            <td>{{l.scores}}</td>
+            <td> <a href="/list/{{l.name}}/update" type="button">Update</a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+
+</html>
