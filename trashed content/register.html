@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+    <!--css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+    <!--icon css-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+    <div class="container">
+        <div class="register">
+            <h1>REGISTER NOW</h1>
+            <form>
+                <div class="input-field">
+                    <label>Full Name</label><br>
+                    <input type="text" placeholder="Enter You Name" required>
+                </div>
+                <div class="input-field">
+                    <label>Email</label><br>
+                    <input type="email" placeholder="Enter Your Email">
+                </div>
+                <div class="input-field">
+                    <label>Phone Number</label><br>
+                    <input type="text" placeholder="Enter Age in years">
+                </div>  
+                <div class="input-filed">
+                    <label> Level Of Education:</label><br>
+                    <select name="Level Of Education" id = "degree">
+                        <option> FY BSC(Computer Science)</option>
+                        <option> SY BSC(Computer Science)</option>
+                        <option> TY BSC(Computer Science)</option>
+                    </Select><br><br>
+                </div>
+            </form>
+        </div>
+        <div>
+            <center>  <button class="btn">REGISTER</button></center>
+        </div>
+    </div>
+</body>
+</html>

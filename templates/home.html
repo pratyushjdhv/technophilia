@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- == google font == -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- == icon == -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <title>TECHNOPHILIA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+    <style>
+        .custom-box {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #000;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .custom-box a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .custom-box:hover {
+            background-color: #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+            /* Move the box 5 pixels upwards on hover */
+        }
+
+        .custom-box:hover .custom-box-popup {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+
+        <div>TECH-HOLIC</div>
+        <div class="custom-box">
+            <a href="{{ url_for('login') }}">
+                <h3 style="color: rgb(252, 252, 252);">LOGIN</h3>
+            </a>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <div>The</div>
+            <div style="color: #0f0;">TECHNOPHILIA</div>
+
+            <div style="padding: 25PX;font-size: 70PX;">COMPUTER SCIENCE 2024 </div>
+
+            <div class="ev custom-box">
+                <a href="{{ url_for('events') }}">EVENTS</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="col1">
+                <a href="#" class="brand"></a>
+                <ul class="media-icons">
+                    <li>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-discord"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/theujwalthakre/"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col2">
+                <ul class="menu">
+                    <li><a href="{{ url_for('events') }}">Events</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('signup') }}">register</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>"Technophilia" refers to a strong enthusiasm or love for technology and technological advancements. It
+            describes
+            an individual's keen interest, passion, or affinity for all things related to technology, gadgets, digital
+            innovations, and the rapid evolution of technological tools and systems. Someone who is technophilic is
+            typically
+            excited about exploring, adopting, and staying abreast of the latest developments in the
+            world of technology.</p>
+
+        <div class="footer-bottom">
+            <div class="mekk">
+                <p>@Technophilia 2023 K.V.N.naik college- All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -21,17 +21,19 @@
         <tr>
             <th>Name</th>
             <th>email</th>
-            <th>password</th>
             <th>scores</th>
+            <th>admin</th>
             <th>update scores</th>
+            <th>delete</th>
         </tr>
         {% for l in lis %}
         <tr>
             <td>{{l.name}}</td>
-            <td>{{l.email}}</td>
-            <td>{{l.password}}</td>
+            <td>{{l.email}}</td>               
             <td>{{l.scores}}</td>
+            <td>{{l.is_admin}}</td>  
             <td> <a href="/list/{{l.name}}/update" type="button">Update</a> </td>
+            <td><a href="/list/{{l.name}}/delete" type="button">Delete</a></td>
         </tr>
         {% endfor %}
     </table>
